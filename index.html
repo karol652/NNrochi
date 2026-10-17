@@ -1,394 +1,438 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-<title>Trade With Munaaf</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
-
-body{
-background:
-linear-gradient(135deg,#020617,#0f172a,#111827);
-min-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-padding:20px;
-overflow:hidden;
-color:#fff;
-}
-
-/* GLOW */
-
-.blur1,
-.blur2{
-position:fixed;
-border-radius:50%;
-filter:blur(90px);
-z-index:-1;
-}
-
-.blur1{
-width:260px;
-height:260px;
-background:#22c55e;
-top:-80px;
-left:-80px;
-opacity:0.25;
-}
-
-.blur2{
-width:260px;
-height:260px;
-background:#3b82f6;
-bottom:-100px;
-right:-100px;
-opacity:0.25;
-}
-
-/* CARD */
-
-.card{
-width:100%;
-max-width:430px;
-
-background:rgba(255,255,255,0.06);
-backdrop-filter:blur(16px);
-
-border:1px solid rgba(255,255,255,0.08);
-
-border-radius:28px;
-
-padding:30px 24px;
-
-box-shadow:
-0 15px 50px rgba(0,0,0,0.6),
-inset 0 1px 1px rgba(255,255,255,0.08);
-
-text-align:center;
-
-position:relative;
-overflow:hidden;
-}
-
-/* TOP TAG */
-
-.top-tag{
-display:inline-block;
-padding:8px 16px;
-border-radius:50px;
-font-size:12px;
-font-weight:700;
-background:rgba(34,197,94,0.12);
-border:1px solid rgba(34,197,94,0.3);
-color:#4ade80;
-margin-bottom:18px;
-}
-
-/* LOGO */
-
-.logo-wrap{
-display:flex;
-justify-content:center;
-margin-bottom:15px;
-}
-
-.logo{
-width:90px;
-height:90px;
-border-radius:50%;
-border:3px solid #facc15;
-padding:4px;
-object-fit:cover;
-
-box-shadow:
-0 0 25px rgba(250,204,21,0.4);
-}
-
-/* HEADING */
-
-h1{
-font-size:28px;
-font-weight:800;
-line-height:1.2;
-margin-bottom:8px;
-
-background:linear-gradient(90deg,#facc15,#ffffff);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-}
-
-h2{
-font-size:14px;
-font-weight:500;
-opacity:0.85;
-margin-bottom:18px;
-letter-spacing:1px;
-}
-
-.desc{
-font-size:14px;
-line-height:1.7;
-opacity:0.85;
-margin-bottom:20px;
-}
-
-/* TRUST */
-
-.trust-box{
-display:flex;
-justify-content:space-between;
-gap:10px;
-margin-bottom:18px;
-}
-
-.trust{
-flex:1;
-background:rgba(255,255,255,0.05);
-padding:12px 10px;
-border-radius:14px;
-border:1px solid rgba(255,255,255,0.06);
-font-size:12px;
-font-weight:600;
-}
-
-/* BUTTON */
-
-.btn{
-display:block;
-width:100%;
-text-decoration:none;
-
-background:linear-gradient(90deg,#22c55e,#16a34a);
-
-padding:17px;
-border-radius:14px;
-
-font-size:16px;
-font-weight:700;
-color:#fff;
-
-margin:14px 0;
-
-box-shadow:0 10px 25px rgba(34,197,94,0.35);
-
-transition:0.3s;
-}
-
-.btn:hover{
-transform:translateY(-2px) scale(1.02);
-}
-
-/* FEATURES */
-
-.features{
-margin-top:15px;
-text-align:left;
-}
-
-.feature{
-display:flex;
-align-items:center;
-gap:10px;
-
-background:rgba(255,255,255,0.04);
-
-padding:12px;
-border-radius:12px;
-
-margin-bottom:10px;
-
-font-size:14px;
-}
-
-/* LIVE BOX */
-
-.live{
-margin-top:18px;
-
-background:linear-gradient(90deg,
-rgba(59,130,246,0.15),
-rgba(34,197,94,0.15));
-
-padding:14px;
-border-radius:14px;
-
-border:1px solid rgba(255,255,255,0.08);
-
-font-size:13px;
-line-height:1.7;
-}
-
-/* TIMER */
-
-.timer{
-margin-top:18px;
-font-size:13px;
-font-weight:700;
-color:#facc15;
-
-animation:blink 1s infinite;
-}
-
-@keyframes blink{
-50%{
-opacity:0.5;
-}
-}
-
-/* FOOTER */
-
-.footer{
-margin-top:22px;
-font-size:12px;
-opacity:0.7;
-line-height:1.7;
-}
-
-.footer a{
-color:#38bdf8;
-text-decoration:none;
-font-weight:600;
-}
-
-.risk{
-margin-top:10px;
-font-size:11px;
-opacity:0.5;
-}
-
-/* MOBILE */
-
-@media(max-width:480px){
-
-.card{
-padding:26px 18px;
-border-radius:24px;
-}
-
-h1{
-font-size:24px;
-}
-
-.btn{
-font-size:15px;
-padding:15px;
-}
-
-}
-
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rochit Singh Stocks</title>
+ 
+  <!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1426521112921774');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1426521112921774&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+  
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      background-color: #0d0d0d;
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    /* Main Card Container */
+    .card {
+      background-color: #161616;
+      border: 1px solid #282828;
+      border-radius: 28px;
+      width: 100%;
+      max-width: 420px;
+      padding: 32px 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      animation: fadeIn 0.8s ease-out;
+    }
+
+    /* Profile Image */
+    .profile-img {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      border: 3px solid #ffcc00;
+      object-fit: cover;
+      margin-bottom: 20px;
+      box-shadow: 0 0 15px rgba(255, 204, 0, 0.3);
+      animation: zoomIn 0.8s ease-out;
+    }
+
+    /* Title Section */
+    .title-container {
+      text-align: center;
+      margin-bottom: 12px;
+    }
+
+    .title {
+      color: #ffcc00;
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .crown {
+      font-size: 20px;
+    }
+
+    /* Subtitle Tag */
+    .tagline {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      font-size: 14px;
+      color: #e0e0e0;
+      margin-top: 8px;
+      margin-bottom: 24px;
+    }
+
+    .check-icon {
+      background-color: #22c55e;
+      color: #000;
+      font-size: 10px;
+      font-weight: bold;
+      width: 16px;
+      height: 16px;
+      border-radius: 3px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Info Buttons */
+    .info-btn {
+      width: 100%;
+      background-color: #212121;
+      border: 1px solid #2a2a2a;
+      border-radius: 14px;
+      padding: 14px;
+      text-align: center;
+      font-size: 15px;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 12px;
+    }
+
+    /* Main CTA Join Button */
+    .cta-button {
+      width: 100%;
+      background-color: #0088cc;
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 700;
+      padding: 16px;
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin: 8px 0 20px 0;
+      box-shadow: 0 4px 15px rgba(0, 136, 204, 0.4);
+      animation: pulse 2s infinite;
+      transition: transform 0.2s ease;
+    }
+
+    .cta-button:active {
+      transform: scale(0.98);
+    }
+
+    .telegram-icon {
+      width: 20px;
+      height: 20px;
+      fill: currentColor;
+    }
+
+    /* Feature List Items */
+    .feature-item {
+      width: 100%;
+      background-color: #212121;
+      border: 1px solid #2a2a2a;
+      border-radius: 14px;
+      padding: 14px 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 15px;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 12px;
+    }
+
+    .feature-check {
+      background-color: #22c55e;
+      color: #000;
+      font-size: 11px;
+      font-weight: bold;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    /* Footer Links */
+    .footer-links {
+      display: flex;
+      gap: 12px;
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid #282828;
+      width: 100%;
+      justify-content: center;
+    }
+
+    .footer-links button {
+      background: none;
+      border: none;
+      color: #888888;
+      font-size: 12px;
+      text-decoration: underline;
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+
+    .footer-links button:hover {
+      color: #ffffff;
+    }
+
+    /* Modal (Popup) Styles */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(4px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+      z-index: 1000;
+      padding: 20px;
+    }
+
+    .modal-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modal-box {
+      background-color: #1e1e1e;
+      border: 1px solid #333;
+      border-radius: 20px;
+      width: 100%;
+      max-width: 400px;
+      padding: 24px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+      transform: scale(0.9);
+      transition: transform 0.3s ease;
+      position: relative;
+    }
+
+    .modal-overlay.active .modal-box {
+      transform: scale(1);
+    }
+
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #2c2c2c;
+    }
+
+    .modal-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #ffcc00;
+    }
+
+    .close-btn {
+      background: none;
+      border: none;
+      color: #aaa;
+      font-size: 24px;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    .close-btn:hover {
+      color: #fff;
+    }
+
+    .modal-body {
+      font-size: 14px;
+      color: #ccc;
+      line-height: 1.6;
+      max-height: 250px;
+      overflow-y: auto;
+    }
+
+    /* Keyframe Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes zoomIn {
+      from { transform: scale(0.8); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(0, 136, 204, 0.7); }
+      70% { box-shadow: 0 0 0 15px rgba(0, 136, 204, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(0, 136, 204, 0); }
+    }
+  </style>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1639559540847539');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1639559540847539&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+  
 </head>
-
 <body>
 
-<div class="blur1"></div>
-<div class="blur2"></div>
+  <div class="card">
+    <img src="rochit.jpeg" alt="Rochit Singh" class="profile-img" />
 
-<div class="card">
+    <div class="title-container">
+      <div class="title">
+        <span class="crown">👑</span> ROCHIT SINGH STOCKS <span class="crown">👑</span>
+      </div>
+    </div>
 
-<div class="top-tag">
-🔥 INDIA'S FAST GROWING TRADING COMMUNITY
-</div>
+    <div class="tagline">
+      <span class="check-icon">✓</span>
+      <span>Trusted by thousands of learners</span>
+    </div>
 
-<div class="logo-wrap">
-<img src="https://i.ibb.co/HThtfpR7/Whats-App-Image-2026-01-30-at-8-54-08-PM.jpg" class="logo">
-</div>
+    <div class="info-btn">24/7 Updates</div>
+    <div class="info-btn">Free to Join</div>
 
-<h1>TRADE WITH MUNAAF</h1>
+    <a href="https://t.me/+fuaXs2SEPwUzYmM1" class="cta-button" target="_blank">
+      <svg class="telegram-icon" viewBox="0 0 24 24">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.12.02-1.96 1.25-5.54 3.69-.52.36-1 .53-1.42.52-.47-.01-1.37-.26-2.03-.48-.82-.27-1.47-.42-1.42-.88.03-.24.37-.49 1.02-.75 4-1.74 6.68-2.88 8.04-3.44 3.83-1.58 4.62-1.86 5.14-1.87.11 0 .37.03.54.17.14.12.18.28.2.45-.02.07-.01.21-.02.32z"/>
+      </svg>
+      Join on Telegram
+    </a>
 
-<h2>NIFTY • BANKNIFTY • OPTION CALLS</h2>
+    <div class="feature-item">
+      <span class="feature-check">✓</span>
+      <span>Market Insights & Discussions</span>
+    </div>
 
-<p class="desc">
-Get daily high-probability intraday setups with
-accurate entries, targets & risk management.
-Perfect for beginners and active traders.
-</p>
+    <div class="feature-item">
+      <span class="feature-check">✓</span>
+      <span>Learn with Experts</span>
+    </div>
 
-<div class="trust-box">
+    <div class="feature-item">
+      <span class="feature-check">✓</span>
+      <span>Practical Strategies</span>
+    </div>
 
-<div class="trust">
-📈 5000+ Active Traders
-</div>
+    <div class="footer-links">
+      <button onclick="openModal('about')">About Us</button>
+      <button onclick="openModal('terms')">Terms & Conditions</button>
+      <button onclick="openModal('disclaimer')">Disclaimer</button>
+      <button onclick="openModal('contact')">Contact Us</button>
+    </div>
+  </div>
 
-<div class="trust">
-⚡ Live Market Updates
-</div>
+  <div class="modal-overlay" id="infoModal" onclick="closeModalOnOutsideClick(event)">
+    <div class="modal-box">
+      <div class="modal-header">
+        <div class="modal-title" id="modalTitle">Header</div>
+        <button class="close-btn" onclick="closeModal()">&times;</button>
+      </div>
+      <div class="modal-body" id="modalContent">
+        Content goes here...
+      </div>
+    </div>
+  </div>
 
-</div>
+  <script>
+    // Content for each link
+    const modalData = {
+      about: {
+        title: "About Us",
+        content: "Welcome to Rochit Singh Stocks. We provide Educational Market Insights, Technical Analysis, and Learning content for stock market enthusiasts."
+      },
+      terms: {
+        title: "Terms & Conditions",
+        content: "All content provided on this channel is for educational purposes only. We are not responsible for any financial profits or losses."
+      },
+      disclaimer: {
+        title: "Disclaimer",
+        content: "Trading and investing in stock markets involves financial risk. Please consult your financial advisor before making any investment decisions."
+      },
+      contact: {
+        title: "Contact Us",
+        content: "For inquiries and support, connect with us on Telegram: <br><br><b>Telegram Link:</b> https://t.me/+fuaXs2SEPwUzYmM1"
+      }
+    };
 
-<!-- BUTTON -->
-
-<a href="https://t.me/+2PsKWi3L1Uk3NjZl" class="btn">
-🚀 JOIN FREE TELEGRAM NOW
+    function openModal(key) {
+      if (modalData[key]) {
+        document.getElementById('modalTitle').innerText = modalData[key].title;
+        document.getElementById('modalContent').innerHTML = modalData[key].content;
+        document.getElementById('infoModal').classList.add('active');
+      }
+    }
+<a href="https://YOUR-AGENCY-LINK.com"
+   target="_blank"
+   rel="noopener noreferrer"
+   class="agency-link">
+    Powered by <strong>AdNovaagency</strong>
 </a>
+    function closeModal() {
+      document.getElementById('infoModal').classList.remove('active');
+    }
 
-<!-- FEATURES -->
-
-<div class="features">
-
-<div class="feature">
-✅ 5–7 Premium Setups Daily
-</div>
-
-<div class="feature">
-✅ Exact Entry • SL • Targets
-</div>
-
-<div class="feature">
-✅ Beginner Friendly Guidance
-</div>
-
-<div class="feature">
-✅ Fast News & Live Updates
-</div>
-
-</div>
-
-<!-- LIVE -->
-
-<div class="live">
-🔥 Today's Market Opportunities Are Live <br>
-Join Now Before Free Access Ends
-</div>
-
-<!-- BUTTON -->
-
-<a href="https://t.me/+2PsKWi3L1Uk3NjZl" class="btn">
-💰 START FREE TODAY
-</a>
-
-<div class="timer">
-⏳ Limited Time Free Access
-</div>
-
-<!-- FOOTER -->
-
-<div class="footer">
-
-Powered by
-<a href="https://t.me/+3XoqJNLxYHswNTc1" target="_blank">
-AdsBuild Agency
-</a>
-
-<div class="risk">
-⚠ Market investments are subject to market risk
-</div>
-
-</div>
-
-</div>
+    function closeModalOnOutsideClick(e) {
+      if (e.target.classList.contains('modal-overlay')) {
+        closeModal();
+      }
+    }
+  </script>
 
 </body>
 </html>
